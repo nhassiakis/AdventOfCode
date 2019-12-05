@@ -11,8 +11,9 @@ namespace Day2
     {
         public static List<int> ImportCsv()
         {
+            string pathLaptop = @"C:\Users\Nico\Documents\GitHub\AdventOfCode\Day2\Data\data.csv";
             List<int> allValues = new List<int>();
-            using (StreamReader reader = new StreamReader(@"C:\Users\Nico\source\repos\AdventOfCode\Day2\Data\data.csv"))
+            using (StreamReader reader = new StreamReader(pathLaptop))
             {
                 string line = null;
                 while (null != (line = reader.ReadLine()))
