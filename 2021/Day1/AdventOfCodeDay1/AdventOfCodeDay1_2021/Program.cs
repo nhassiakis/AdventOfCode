@@ -19,8 +19,8 @@ namespace AdventOfCodeDay1_2021
             {
                 if (newData.Count > 0)
                 {
-                    int highestNumber = newData.Max(t => t);
-                    if (currentData > highestNumber)
+                    int lastNumber = newData.Last();
+                    if (currentData > lastNumber)
                     {
                         incriments++;
                     }

@@ -13,7 +13,7 @@ namespace AdventOfCodeDay1_2021.Data
 
         public List<int> SomeMethod()
         {
-            string path = "C:\\Users\\Nico\\Documents\\Github\\AdventOfCode\\2021\\AdventOfCodeDay1\\AdventOfCodeDay1_2021\\Data\\measurmentData.txt";
+            string path = "C:\\Users\\Nico\\Documents\\Github\\AdventOfCode\\2021\\Day1\\AdventOfCodeDay1\\AdventOfCodeDay1_2021\\Data\\measurmentData.txt";
             var lines = File.ReadAllLines(path);
             foreach (var line in lines)
             {
