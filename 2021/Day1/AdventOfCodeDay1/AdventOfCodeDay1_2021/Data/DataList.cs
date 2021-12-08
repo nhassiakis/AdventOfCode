@@ -11,10 +11,10 @@ namespace AdventOfCodeDay1_2021.Data
     {
         List<int> measurmentList = new List<int>();
 
-        public List<int> SomeMethod()
+        public List<int> ReadFileToList()
         {
-            string path = "C:\\Users\\Nico\\Documents\\Github\\AdventOfCode\\2021\\Day1\\AdventOfCodeDay1\\AdventOfCodeDay1_2021\\Data\\measurmentData.txt";
-            var lines = File.ReadAllLines(path);
+            string pathLocal = Directory.GetCurrentDirectory();
+            var lines = File.ReadAllLines(pathLocal+ "\\..\\..\\..\\Data\\measurmentData.txt");
             foreach (var line in lines)
             {
                 measurmentList.Add(Convert.ToInt32(line));
@@ -22,6 +22,10 @@ namespace AdventOfCodeDay1_2021.Data
             return measurmentList;
         }
 
+        public void PartTwoAoC()
+        {
+
+        }
 
     }
 

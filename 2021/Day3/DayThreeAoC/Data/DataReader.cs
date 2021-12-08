@@ -11,19 +11,26 @@ namespace DayThreeAoC.Data
     {
         public static void ProcessBinary()
         {
-            var path = "C:\\Users\\Nico\\Documents\\Github\\AdventOfCode\\2021\\Day3\\DayThreeAoC\\Data\\DataInput.txt";
-            List<string> binaryList = File.ReadAllLines(path).ToList();
+            //var path = "C:\\Users\\Nico\\Documents\\Github\\AdventOfCode\\2021\\Day3\\DayThreeAoC\\Data\\DataInput.txt";
+            //List<string> binaryList = File.ReadAllLines(path).ToList();
+            string pathLocal = Directory.GetCurrentDirectory();
+            var binaryList = File.ReadAllLines(pathLocal + "\\..\\..\\..\\Data\\measurmentData.txt");
             var numOfZero = 0;
             var numOfOnes = 0;
-            foreach (var binary in binaryList)
+            for (int i = 0; i < binaryList.Length; i++)
             {
-                if (binary.StartsWith("0"))
+                var binaryString = binaryList[i];
+                for (int y = 0; y < binaryString.Length; y++)
                 {
-                    numOfZero++;
-                }
-                else if (binary.StartsWith("1"))
-                {
-                    numOfOnes++;
+                    var binary = binaryString[y];
+                    if (binaryList.Equals("0"))
+                    {
+                        numOfZero++;
+                    }
+                    else if (binary.Equals("1"))
+                    {
+                        numOfOnes++;
+                    }
                 }
             }
             if (numOfZero > numOfOnes)
